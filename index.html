@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>telc - Certificate Verification</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #ffffff; margin: 0; padding: 0; color: #333; }
+        header { background-color: #f8f9fa; padding: 20px; border-bottom: 1px solid #dee2e6; text-align: left; }
+        header img { height: 40px; margin-left: 10%; }
+        .main-content { padding: 40px 10%; }
+        h1 { font-size: 24px; font-weight: normal; margin-bottom: 30px; color: #000; }
+        .info-grid { display: grid; grid-template-columns: 200px 1fr; gap: 15px; border-top: 1px solid #eee; padding-top: 20px; }
+        .label { color: #666; font-size: 14px; }
+        .value { font-weight: bold; font-size: 16px; }
+        .status-valid { color: #28a745; font-weight: bold; display: flex; align-items: center; }
+        .status-valid::before { content: '✔'; margin-right: 8px; }
+        footer { margin-top: 50px; font-size: 12px; color: #999; border-top: 1px solid #eee; padding-top: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://www.telc.net/typo3conf/ext/telc/Resources/Public/Images/telc-logo.svg" alt="telc logo">
+    </header>
+    <div class="main-content">
+        <h1>Zertifikatsverifizierung / Certificate Verification</h1>
+        
+        <div class="info-grid">
+            <div class="label">Name / Name:</div>
+            <div class="value">Ghourchian, Maryam</div>
+            
+            <div class="label">Geburtsdatum / Date of Birth:</div>
+            <div class="value">22.11.2004</div>
+            
+            <div class="label">Prüfung / Exam:</div>
+            <div class="value">telc Deutsch B2</div>
+            
+            <div class="label">Datum / Date:</div>
+            <div class="value">01.02.2025</div>
+            
+            <div class="label">Ergebnis / Result:</div>
+            <div class="value">212,0 / 300 (ausreichend)</div>
+            
+            <div class="label">Status / Status:</div>
+            <div class="status-valid">Gültig / Valid</div>
+        </div>
+
+        <footer>
+            © telc gGmbH - Die Verifizierung dieses Zertifikats ist offiziell erfolgt.
+        </footer>
+    </div>
+</body>
+</html>
