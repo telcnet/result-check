@@ -1,53 +1,169 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>telc - Certificate Verification</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #ffffff; margin: 0; padding: 0; color: #333; }
-        header { background-color: #f8f9fa; padding: 20px; border-bottom: 1px solid #dee2e6; text-align: left; }
-        header img { height: 40px; margin-left: 10%; }
-        .main-content { padding: 40px 10%; }
-        h1 { font-size: 24px; font-weight: normal; margin-bottom: 30px; color: #000; }
-        .info-grid { display: grid; grid-template-columns: 200px 1fr; gap: 15px; border-top: 1px solid #eee; padding-top: 20px; }
-        .label { color: #666; font-size: 14px; }
-        .value { font-weight: bold; font-size: 16px; }
-        .status-valid { color: #28a745; font-weight: bold; display: flex; align-items: center; }
-        .status-valid::before { content: '✔'; margin-right: 8px; }
-        footer { margin-top: 50px; font-size: 12px; color: #999; border-top: 1px solid #eee; padding-top: 20px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Official telc Result Check - Ghourchian, Maryam</title>
+<style>
+    :root {
+        --telc-bg: #f4f4f4;
+        --telc-text: #333;
+        --header-bg: #444; 
+        --telc-red: #e30613;
+    }
+
+    body {
+        font-family: 'Open Sans', Arial, sans-serif;
+        background-color: var(--telc-bg);
+        margin: 0;
+        color: var(--telc-text);
+    }
+
+    /* Header with Logo */
+    .header {
+        background-color: var(--header-bg);
+        padding: 15px 0;
+        border-bottom: 4px solid var(--telc-red);
+        color: white;
+    }
+
+    .header-content {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .telc-logo {
+        height: 45px; /* Size of the logo */
+        margin-right: 20px;
+        filter: brightness(0) invert(1); /* Makes the logo white to fit the header */
+    }
+
+    .header h1 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 30px auto;
+        background: #fff;
+        padding: 40px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .main-title {
+        color: #666;
+        font-size: 24px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+        margin-bottom: 25px;
+    }
+
+    .candidate-info {
+        background: #f9f9f9;
+        padding: 20px;
+        border-left: 5px solid var(--telc-red);
+        margin-bottom: 30px;
+    }
+
+    .candidate-name {
+        font-size: 22px;
+        font-weight: bold;
+        display: block;
+    }
+
+    .score-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    .score-table th {
+        background: #eee;
+        text-align: left;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .score-table td {
+        padding: 12px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .total-row {
+        background: #fdfdfd;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .result-badge {
+        margin-top: 30px;
+        text-align: center;
+        padding: 15px;
+        background: #28a745;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 5px;
+    }
+</style>
 </head>
 <body>
-    <header>
-        <img src="https://www.telc.net/typo3conf/ext/telc/Resources/Public/Images/telc-logo.svg" alt="telc logo">
-    </header>
-    <div class="main-content">
-        <h1>Zertifikatsverifizierung / Certificate Verification</h1>
-        
-        <div class="info-grid">
-            <div class="label">Name / Name:</div>
-            <div class="value">Ghourchian, Maryam</div>
-            
-            <div class="label">Geburtsdatum / Date of Birth:</div>
-            <div class="value">22.11.2004</div>
-            
-            <div class="label">Prüfung / Exam:</div>
-            <div class="value">telc Deutsch B2</div>
-            
-            <div class="label">Datum / Date:</div>
-            <div class="value">01.02.2025</div>
-            
-            <div class="label">Ergebnis / Result:</div>
-            <div class="value">212,0 / 300 (ausreichend)</div>
-            
-            <div class="label">Status / Status:</div>
-            <div class="status-valid">Gültig / Valid</div>
-        </div>
 
-        <footer>
-            © telc gGmbH - Die Verifizierung dieses Zertifikats ist offiziell erfolgt.
-        </footer>
+<div class="header">
+    <div class="header-content">
+        <!-- Official telc Logo Link -->
+        <img src="https://www.telc.net/fileadmin/user_upload/telc_logo_white.png" alt="telc Logo" class="telc-logo">
+        <h1>Online Result Check</h1>
     </div>
+</div>
+
+<div class="container">
+    <h2 class="main-title">Examination Results</h2>
+
+    <div class="candidate-info">
+        <span class="candidate-name">Ghourchian, Maryam</span>
+        <span>Date of Birth: 22.11.2004</span><br>
+        <span>Participant ID: 4531505</span>
+    </div>
+
+    <table class="score-table">
+        <thead>
+            <tr>
+                <th>Component</th>
+                <th>Result</th>
+                <th>Maximum</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Written Examination</td>
+                <td>161.0</td>
+                <td>225</td>
+            </tr>
+            <tr>
+                <td>Oral Examination</td>
+                <td>51.0</td>
+                <td>75</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total Score</td>
+                <td>212.0</td>
+                <td>300</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="result-badge">
+        RESULT: PASS (AUSREICHEND)
+    </div>
+</div>
+
 </body>
 </html>
