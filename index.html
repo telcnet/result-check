@@ -3,232 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>telc Zertifikatsverifizierung</title>
+    <title>telc Zertifikatsverifizierung - Ghourchian</title>
     <style>
-        :root {
-            --telc-red: #bf002d;
-            --line-color: #333;
-        }
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #fff;
-            color: #000;
+            color: #1a1a1a;
         }
-        .header {
-            background-color: #333;
-            color: white;
-            padding: 15px 20px;
-            display: flex;
-            align-items: center;
-            border-bottom: 4px solid var(--telc-red);
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 25px;
         }
-        .header img {
-            height: 30px;
-            margin-right: 15px;
-        }
-        .header span {
-            font-size: 16px;
-            letter-spacing: 1px;
-            font-weight: 300;
-        }
-        .content {
-            padding: 20px;
-            max-width: 600px;
-            margin: auto;
-        }
-        .title-section h1 {
-            font-size: 28px;
-            margin-bottom: 5px;
-            border-left: 4px solid var(--telc-red);
+        .red-bar {
+            border-left: 5px solid #8c0000;
             padding-left: 15px;
-        }
-        .sub-text {
-            font-size: 14px;
-            color: #555;
-            margin-bottom: 40px;
-        }
-        .cert-type {
-            font-size: 50px;
-            font-weight: bold;
-            margin: 20px 0;
-        }
-        .exam-name {
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        .cefr-level {
-            font-size: 16px;
-            margin-bottom: 30px;
-        }
-        
-        /* استایل دقیق فیلدهای اطلاعاتی مشابه عکس */
-        .info-group {
             margin-bottom: 25px;
         }
-        .info-value {
-            font-size: 18px;
-            font-weight: bold;
+        .verif-header {
+            font-size: 34px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin: 0;
+        }
+        .intro-text {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #333;
+            margin-bottom: 40px;
+        }
+        .cert-display {
+            font-size: 70px;
+            font-weight: 300;
+            margin: 40px 0;
+            letter-spacing: -1px;
+        }
+        .exam-title {
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+        .cefr-text {
+            font-size: 17px;
+            margin-bottom: 45px;
+        }
+        .field-group {
+            margin-bottom: 30px;
+        }
+        .field-value {
+            font-size: 20px;
+            font-weight: 800;
             text-transform: uppercase;
-            border-bottom: 1.5px solid var(--line-color);
+            border-bottom: 1.2px solid #000;
             display: block;
             padding-bottom: 2px;
         }
-        .info-label {
-            font-size: 14px;
-            color: #333;
-            margin-top: 4px;
-            display: block;
+        .field-label {
+            font-size: 15px;
+            color: #444;
+            margin-top: 5px;
         }
-
         .section-title {
-            font-size: 20px;
-            font-weight: bold;
-            margin: 40px 0 20px 0;
+            font-size: 21px;
+            font-weight: 800;
+            margin: 40px 0 15px 0;
         }
-
-        .score-item {
+        .score-row {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-bottom: 15px;
-        }
-        .score-label {
-            display: flex;
-            align-items: center;
-        }
-        .dot {
-            height: 6px;
-            width: 6px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            margin-right: 10px;
+            justify-content: flex-end;
+            align-items: baseline;
+            margin-bottom: 10px;
         }
         .score-box {
+            border-bottom: 1px solid #000;
+            min-width: 80px;
+            text-align: center;
+            font-weight: 800;
+            font-size: 19px;
+            margin-right: 10px;
+        }
+        .skill-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .skill-name {
             display: flex;
             align-items: center;
+            font-size: 17px;
         }
-        .score-value {
+        .dot {
+            width: 7px;
+            height: 7px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .summe-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .summe-label {
+            font-size: 22px;
+            font-weight: 800;
+        }
+        .praedikat-label {
+            font-size: 22px;
+            font-weight: 800;
+            margin-top: 40px;
+            display: block;
+        }
+        .praedikat-value {
+            font-size: 20px;
+            font-weight: 800;
             border-bottom: 1px solid #000;
-            min-width: 60px;
-            text-align: center;
-            font-weight: bold;
-            margin-right: 10px;
+            text-align: right;
+            margin-top: -25px;
+            padding-bottom: 3px;
+        }
+        .footer-note {
+            margin-top: 50px;
+            font-size: 13px;
+            color: #555;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <img src="https://www.telc.net/fileadmin/user_upload/telc_logo_white.png" alt="telc">
-        <span>ONLINE RESULT CHECK</span>
+<div class="container">
+    <div class="red-bar">
+        <h1 class="verif-header">Verifikation von<br>telc Zertifikaten</h1>
+    </div>
+    
+    <p class="intro-text">
+        Hier können Sie die Ergebnisse des Ihnen vorliegenden telc Zertifikats verifizieren. Vergleichen Sie dazu die folgende Anzeige mit dem Ihnen vorgelegten Ausdruck des Zertifikats.
+    </p>
+
+    <div class="cert-display">Zertifikat</div>
+
+    <div class="exam-title">telc Deutsch B2</div>
+    <div class="cefr-text">Europaratsstufe B2 · <i>Council of Europe level B2</i></div>
+
+    <!-- Personal Data for Maryam -->
+    <div class="field-group">
+        <span class="field-value">GHOURCHIAN</span>
+        <span class="field-label">Name</span>
+    </div>
+    <div class="field-group">
+        <span class="field-value">MARYAM</span>
+        <span class="field-label">Vorname</span>
+    </div>
+    <div class="field-group">
+        <span class="field-value">22.11.2004</span>
+        <span class="field-label">Geburtsdatum</span>
+    </div>
+    <div class="field-group">
+        <span class="field-value">KARAJ</span>
+        <span class="field-label">Geburtsort</span>
     </div>
 
-    <div class="content">
-        <div class="title-section">
-            <h1>Verifikation von telc Zertifikaten</h1>
-        </div>
-        <p class="sub-text">
-            Hier können Sie die Ergebnisse des Ihnen vorliegenden telc Zertifikats verifizieren. 
-            Vergleichen Sie dazu die folgende Anzeige mit dem Ihnen vorgelegten Ausdruck des Zertifikats.
-        </p>
-
-        <div class="cert-type">Zertifikat</div>
-
-        <div class="exam-name">telc Deutsch B2</div>
-        <div class="cefr-level">Europaratsstufe B2 · <i>Council of Europe level B2</i></div>
-
-        <!-- بخش اطلاعات داوطلب مطابق عکس 1000084942 -->
-        <div class="info-group">
-            <span class="info-value">GHOURCHIAN</span>
-            <span class="info-label">Name</span>
-        </div>
-
-        <div class="info-group">
-            <span class="info-value">MARYAM</span>
-            <span class="info-label">Vorname</span>
-        </div>
-
-        <div class="info-group">
-            <span class="info-value">22.11.2004</span>
-            <span class="info-label">Geburtsdatum</span>
-        </div>
-
-        <div class="info-group">
-            <span class="info-value">KARAJ</span>
-            <span class="info-label">Geburtsort</span>
-        </div>
-
-        <!-- بخش نمرات مطابق عکس 1000084946 -->
-        <div class="section-title">Schriftliche Prüfung**</div>
-        
-        <div class="score-item" style="margin-bottom: 30px;">
-            <span></span>
-            <div class="score-box">
-                <span class="score-value">161,0</span>
-                <span>/ 225 Punkte</span>
-            </div>
-        </div>
-
-        <div class="score-item">
-            <div class="score-label"><span class="dot"></span>Leseverstehen</div>
-            <div class="score-box">
-                <span class="score-value">57</span>
-                <span>/ 75 Punkte</span>
-            </div>
-        </div>
-
-        <div class="score-item">
-            <div class="score-label"><span class="dot"></span>Sprachbausteine</div>
-            <div class="score-box">
-                <span class="score-value">21</span>
-                <span>/ 30 Punkte</span>
-            </div>
-        </div>
-
-        <div class="section-title">Mündliche Prüfung</div>
-
-        <div class="score-item">
-            <div class="score-label"><span class="dot"></span>Ergebnis</div>
-            <div class="score-box">
-                <span class="score-value">51,0</span>
-                <span>/ 75 Punkte</span>
-            </div>
-        </div>
-
-        <!-- نمره نهایی مطابق عکس 1000084948 -->
-        <div class="section-title" style="margin-top: 50px;">Summe</div>
-        <div class="score-item">
-            <span></span>
-            <div class="score-box">
-                <span style="font-size: 22px;" class="score-value">212,0</span>
-                <span style="font-size: 20px; font-weight: bold;">/ 300 Punkte</span>
-            </div>
-        </div>
-
-        <div class="info-group" style="margin-top: 40px; text-align: right;">
-            <span style="border: none; font-size: 22px;" class="info-value">Ausreichend</span>
-            <span style="font-weight: bold;" class="info-label">Prädikat</span>
-        </div>
-
-        <div class="info-group" style="margin-top: 40px;">
-            <span class="info-value">01.02.2025</span>
-            <span class="info-label">Datum der Prüfung</span>
-        </div>
-
-        <div class="info-group">
-            <span class="info-value">4531505</span>
-            <span class="info-label">Teilnehmernummer</span>
-        </div>
-
-        <div class="info-group">
-            <span class="info-value">DAS Akademie Izmir</span>
-            <span class="info-label">Prüfungszentrum</span>
-        </div>
-
+    <!-- Scores Written Section -->
+    <div class="section-title">Schriftliche Prüfung**</div>
+    <div class="score-row">
+        <div class="score-box">161,0</div>
+        <span>/ 225 Punkte</span>
     </div>
+
+    <div class="skill-line">
+        <div class="skill-name"><div class="dot"></div>Leseverstehen</div>
+        <div class="score-row" style="margin:0"><div class="score-box">57</div><span>/ 75 Punkte</span></div>
+    </div>
+    <div class="skill-line">
+        <div class="skill-name"><div class="dot"></div>Sprachbausteine</div>
+        <div class="score-row" style="margin:0"><div class="score-box">21</div><span>/ 30 Punkte</span></div>
+    </div>
+    <div class="skill-line">
+        <div class="skill-name"><div class="dot"></div>Hörverstehen</div>
+        <div class="score-row" style="margin:0"><div class="score-box">53</div><span>/ 75 Punkte</span></div>
+    </div>
+    <div class="skill-line">
+        <div class="skill-name"><div class="dot"></div>Schriftlicher Ausdruck</div>
+        <div class="score-row" style="margin:0"><div class="score-box">30</div><span>/ 45 Punkte</span></div>
+    </div>
+
+    <!-- Oral Section -->
+    <div class="section-title">Mündliche Prüfung</div>
+    <div class="score-row">
+        <div class="score-box">51,0</div>
+        <span>/ 75 Punkte</span>
+    </div>
+
+    <!-- Final Result -->
+    <div class="summe-container">
+        <div class="summe-label">Summe</div>
+        <div class="score-row" style="margin:0">
+            <div class="score-box" style="font-size:24px">212,0</div>
+            <span style="font-weight:800">/ 300 Punkte</span>
+        </div>
+    </div>
+
+    <span class="praedikat-label">Prädikat</span>
+    <div class="praedikat-value">Ausreichend</div>
+
+    <!-- Official Registration Info -->
+    <div style="margin-top: 60px;">
+        <div class="field-group"><span class="field-value">01.02.2025</span><span class="field-label">Datum der Prüfung</span></div>
+        <div class="field-group"><span class="field-value">4531505</span><span class="field-label">Teilnehmernummer</span></div>
+        <div class="field-group"><span class="field-value">18.02.2025</span><span class="field-label">Datum der Ausstellung</span></div>
+        <div class="field-group"><span class="field-value">DAS Akademie Izmir</span><span class="field-label">Prüfungszentrum</span></div>
+    </div>
+
+    <p class="footer-note">
+        ** Dieser Prüfungsteil wurde bei einer telc gGmbH verifiziert.
+    </p>
+</div>
+
 </body>
 </html>
