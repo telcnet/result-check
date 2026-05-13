@@ -11,6 +11,7 @@
             padding: 0;
             background-color: #fff;
             color: #1a1a1a;
+            -webkit-font-smoothing: antialiased;
         }
         .container {
             max-width: 500px;
@@ -35,28 +36,27 @@
             margin-bottom: 40px;
         }
         .cert-display {
-            font-size: 70px;
+            font-size: 65px;
             font-weight: 300;
-            margin: 40px 0;
-            letter-spacing: -1px;
+            margin: 35px 0;
         }
         .exam-title {
-            font-size: 26px;
+            font-size: 24px;
             font-weight: 800;
             margin-bottom: 5px;
         }
         .cefr-text {
-            font-size: 17px;
-            margin-bottom: 45px;
+            font-size: 16px;
+            margin-bottom: 40px;
         }
         .field-group {
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
         .field-value {
-            font-size: 20px;
+            font-size: 19px;
             font-weight: 800;
             text-transform: uppercase;
-            border-bottom: 1.2px solid #000;
+            border-bottom: 1px solid #000;
             display: block;
             padding-bottom: 2px;
         }
@@ -66,7 +66,7 @@
             margin-top: 5px;
         }
         .section-title {
-            font-size: 21px;
+            font-size: 20px;
             font-weight: 800;
             margin: 40px 0 15px 0;
         }
@@ -74,52 +74,56 @@
             display: flex;
             justify-content: flex-end;
             align-items: baseline;
-            margin-bottom: 10px;
         }
         .score-box {
             border-bottom: 1px solid #000;
-            min-width: 80px;
+            min-width: 70px;
             text-align: center;
             font-weight: 800;
-            font-size: 19px;
-            margin-right: 10px;
+            font-size: 17px;
+            margin-right: 8px;
+        }
+        .score-max {
+            font-size: 16px;
         }
         .skill-line {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
         .skill-name {
             display: flex;
             align-items: center;
-            font-size: 17px;
+            font-size: 16px;
         }
         .dot {
             width: 7px;
             height: 7px;
             background-color: #ccc;
             border-radius: 50%;
-            margin-right: 15px;
+            margin-right: 12px;
         }
         .summe-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-top: 50px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
         }
         .summe-label {
-            font-size: 22px;
+            font-size: 21px;
             font-weight: 800;
         }
         .praedikat-label {
-            font-size: 22px;
+            font-size: 21px;
             font-weight: 800;
             margin-top: 40px;
             display: block;
         }
         .praedikat-value {
-            font-size: 20px;
+            font-size: 19px;
             font-weight: 800;
             border-bottom: 1px solid #000;
             text-align: right;
@@ -128,16 +132,16 @@
         }
         .footer-note {
             margin-top: 50px;
-            font-size: 13px;
-            color: #555;
-            border-top: 1px solid #eee;
-            padding-top: 20px;
+            font-size: 12px;
+            color: #666;
+            line-height: 1.4;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
+    <!-- Header مطابق تصاویر الگو -->
     <div class="red-bar">
         <h1 class="verif-header">Verifikation von<br>telc Zertifikaten</h1>
     </div>
@@ -151,7 +155,7 @@
     <div class="exam-title">telc Deutsch B2</div>
     <div class="cefr-text">Europaratsstufe B2 · <i>Council of Europe level B2</i></div>
 
-    <!-- Personal Data for Maryam -->
+    <!-- مشخصات مریم -->
     <div class="field-group">
         <span class="field-value">GHOURCHIAN</span>
         <span class="field-label">Name</span>
@@ -165,59 +169,84 @@
         <span class="field-label">Geburtsdatum</span>
     </div>
     <div class="field-group">
-        <span class="field-value">KARAJ</span>
+        <span class="field-value">KARAJ / IR</span>
         <span class="field-label">Geburtsort</span>
     </div>
 
-    <!-- Scores Written Section -->
+    <!-- بخش کتبی با جزئیات نمرات مریم -->
     <div class="section-title">Schriftliche Prüfung**</div>
-    <div class="score-row">
+    <div class="score-row" style="margin-bottom: 20px;">
         <div class="score-box">161,0</div>
-        <span>/ 225 Punkte</span>
+        <span class="score-max">/ 225 Punkte</span>
     </div>
 
     <div class="skill-line">
         <div class="skill-name"><div class="dot"></div>Leseverstehen</div>
-        <div class="score-row" style="margin:0"><div class="score-box">57</div><span>/ 75 Punkte</span></div>
+        <div class="score-row"><div class="score-box">57</div><span class="score-max">/ 75 Punkte</span></div>
     </div>
     <div class="skill-line">
         <div class="skill-name"><div class="dot"></div>Sprachbausteine</div>
-        <div class="score-row" style="margin:0"><div class="score-box">21</div><span>/ 30 Punkte</span></div>
+        <div class="score-row"><div class="score-box">21</div><span class="score-max">/ 30 Punkte</span></div>
     </div>
     <div class="skill-line">
         <div class="skill-name"><div class="dot"></div>Hörverstehen</div>
-        <div class="score-row" style="margin:0"><div class="score-box">53</div><span>/ 75 Punkte</span></div>
+        <div class="score-row"><div class="score-box">53</div><span class="score-max">/ 75 Punkte</span></div>
     </div>
     <div class="skill-line">
         <div class="skill-name"><div class="dot"></div>Schriftlicher Ausdruck</div>
-        <div class="score-row" style="margin:0"><div class="score-box">30</div><span>/ 45 Punkte</span></div>
+        <div class="score-row"><div class="score-box">30</div><span class="score-max">/ 45 Punkte</span></div>
     </div>
 
-    <!-- Oral Section -->
+    <!-- بخش شفاهی با جزئیات کامل -->
     <div class="section-title">Mündliche Prüfung</div>
-    <div class="score-row">
+    <div class="score-row" style="margin-bottom: 20px;">
         <div class="score-box">51,0</div>
-        <span>/ 75 Punkte</span>
+        <span class="score-max">/ 75 Punkte</span>
     </div>
 
-    <!-- Final Result -->
+    <div class="skill-line">
+        <div class="skill-name"><div class="dot"></div>Präsentation</div>
+        <div class="score-row"><div class="score-box">21,0</div><span class="score-max">/ 25 Punkte</span></div>
+    </div>
+    <div class="skill-line">
+        <div class="skill-name"><div class="dot"></div>Diskussion</div>
+        <div class="score-row"><div class="score-box">13,0</div><span class="score-max">/ 25 Punkte</span></div>
+    </div>
+    <div class="skill-line">
+        <div class="skill-name"><div class="dot"></div>Problemlösung</div>
+        <div class="score-row"><div class="score-box">17,0</div><span class="score-max">/ 25 Punkte</span></div>
+    </div>
+
+    <!-- مجموع نمرات و رتبه -->
     <div class="summe-container">
         <div class="summe-label">Summe</div>
-        <div class="score-row" style="margin:0">
-            <div class="score-box" style="font-size:24px">212,0</div>
-            <span style="font-weight:800">/ 300 Punkte</span>
+        <div class="score-row">
+            <div class="score-box" style="font-size:20px">212,0</div>
+            <span style="font-weight:800; font-size: 18px;">/ 300 Punkte</span>
         </div>
     </div>
 
     <span class="praedikat-label">Prädikat</span>
     <div class="praedikat-value">Ausreichend</div>
 
-    <!-- Official Registration Info -->
+    <!-- اطلاعات نهایی آزمون -->
     <div style="margin-top: 60px;">
-        <div class="field-group"><span class="field-value">01.02.2025</span><span class="field-label">Datum der Prüfung</span></div>
-        <div class="field-group"><span class="field-value">4531505</span><span class="field-label">Teilnehmernummer</span></div>
-        <div class="field-group"><span class="field-value">18.02.2025</span><span class="field-label">Datum der Ausstellung</span></div>
-        <div class="field-group"><span class="field-value">DAS Akademie Izmir</span><span class="field-label">Prüfungszentrum</span></div>
+        <div class="field-group">
+            <span class="field-value">01.02.2025</span>
+            <span class="field-label">Datum der Prüfung</span>
+        </div>
+        <div class="field-group">
+            <span class="field-value">4531505</span>
+            <span class="field-label">Teilnehmernummer</span>
+        </div>
+        <div class="field-group">
+            <span class="field-value">18.02.2025</span>
+            <span class="field-label">Datum der Ausstellung</span>
+        </div>
+        <div class="field-group">
+            <span class="field-value" style="text-transform: none;">DAS Akademie Izmir</span>
+            <span class="field-label">Prüfungszentrum</span>
+        </div>
     </div>
 
     <p class="footer-note">
